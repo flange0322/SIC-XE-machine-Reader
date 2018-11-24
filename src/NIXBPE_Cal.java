@@ -136,6 +136,4 @@ public class NIXBPE_Cal {
 			}
 		}
 	}
-	
-	
 }

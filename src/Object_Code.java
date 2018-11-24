@@ -217,16 +217,19 @@ public class Object_Code {
 							}
 						}
 						else if(formatNumber == 3 && format_Four == true) {
-							if((nixbpe.judgeIn()+" "+nixbpe.judgeOp()).equals("+op #m")) {
-								String temp = Integer.toHexString(Integer.valueOf(Operator));
-								while(temp.length()<5) {
-									if(temp.length() != 5)
-										temp = "0"+temp;
-								}
-								object_Codes.add(nixbpe_cal.CalFormat()+temp);
+							nixbpe_cal.setOL(sign);
+							nixbpe_cal.setPL(Loc.get(Loc_count));
+								
+							String message = nixbpe_cal.CalFormat();
+							if(message.equals("again")) {
+								nixbpe_cal.is_Base();
+								message = nixbpe_cal.CalFormat();
+								nixbpe_cal.is_Base();
 							}
+							if(Operator.equals("4096"))
+								object_Codes.add(message+"01000");
 							else
-								object_Codes.add(nixbpe_cal.CalFormat()+"0"+sign);
+								object_Codes.add(message+"0"+sign);
 						}
 						else if(formatNumber == 2) {
 							String format_Two_objcode = instruction_Opcodes.get(instruction.substring(start_Pos, end_Pos));

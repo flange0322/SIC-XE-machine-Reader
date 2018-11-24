@@ -110,6 +110,8 @@ public class Main {
 	    			}
 	    		}
 	    	}
+	    	if(SB.getInstructionArrayList().get(i).equals(SB.getBasePrevious()) && SB.getBaseOperator() != null)
+	    		System.out.println("              BASE "+SB.getBaseOperator());
 	    }
 	   
 	}

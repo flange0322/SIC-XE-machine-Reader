@@ -1,9 +1,7 @@
-
 public class Base_relative {
 	
 	public String Operator_Loc;
 	public String base;
-	
 	public void setOL(String Operator_Loc) {
 		this.Operator_Loc = Operator_Loc;
 	}
